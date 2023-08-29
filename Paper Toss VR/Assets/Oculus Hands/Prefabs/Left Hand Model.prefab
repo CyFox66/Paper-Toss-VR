@@ -328,6 +328,8 @@ GameObject:
   m_Component:
   - component: {fileID: 109434732395451517}
   - component: {fileID: 109434732388006827}
+  - component: {fileID: 8469292054683834260}
+  - component: {fileID: 1519565957381414166}
   m_Layer: 0
   m_Name: Left Hand Model
   m_TagString: Untagged
@@ -373,6 +375,77 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8469292054683834260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109434732395284509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63caadbf08df66248b0936738c69a400, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pinchAnimationAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Pinch Animation
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 69d57966-0be6-4264-ab85-7c33c757bbbe
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -4289430672226363583, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  gripAnimationAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Grip Animation
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 2ae11901-525b-4c45-8b3a-ee0f9e875927
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 6558622148059887818, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  handAnimator: {fileID: 109434732388006827}
+--- !u!114 &1519565957381414166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109434732395284509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c6a74a43095dd944b70248022c3edf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handType: 0
+  root: {fileID: 109434732395451517}
+  animator: {fileID: 109434732388006827}
+  fingerBones:
+  - {fileID: 109434732395451469}
+  - {fileID: 109434732395451459}
+  - {fileID: 109434732395451457}
+  - {fileID: 109434732395451461}
+  - {fileID: 109434732395451483}
+  - {fileID: 109434732395451481}
+  - {fileID: 109434732395451485}
+  - {fileID: 109434732395451475}
+  - {fileID: 109434732395451473}
+  - {fileID: 109434732395451479}
+  - {fileID: 109434732395451499}
+  - {fileID: 109434732395451497}
+  - {fileID: 109434732395451503}
+  - {fileID: 109434732395451491}
+  - {fileID: 109434732395451489}
+  - {fileID: 109434732395451495}
 --- !u!1 &109434732395284511
 GameObject:
   m_ObjectHideFlags: 0
