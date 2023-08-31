@@ -40,13 +40,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8185232298541049831}
-  - component: {fileID: 5835568103171136394}
+  - component: {fileID: 7924703714026029176}
   - component: {fileID: 8418111480272149096}
   - component: {fileID: 157925227219591627}
   - component: {fileID: 1293173081937973168}
+  - component: {fileID: 4155480742822144537}
   m_Layer: 0
   m_Name: CrumpledPaperBall
-  m_TagString: Untagged
+  m_TagString: PaperBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,8 +72,8 @@ Transform:
   - {fileID: 7875228464447214014}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5835568103171136394
-BoxCollider:
+--- !u!135 &7924703714026029176
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -90,7 +91,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.07, y: 0.07, z: 0.07}
+  m_Radius: 0.05
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &8418111480272149096
 Rigidbody:
@@ -288,6 +289,19 @@ MonoBehaviour:
   poseTransitionDuration: 0.2
   rightHandPose: {fileID: 4969214058225975535}
   leftHandPose: {fileID: 2597858778148899548}
+--- !u!114 &4155480742822144537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3382599599597088903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7f64b391e165e24fba5291c4ee4f46b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreBoard: {fileID: 0}
 --- !u!1 &7412467762506870352
 GameObject:
   m_ObjectHideFlags: 0
