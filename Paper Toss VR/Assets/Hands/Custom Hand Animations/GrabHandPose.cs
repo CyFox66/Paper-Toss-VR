@@ -102,10 +102,10 @@ public class GrabHandPose : MonoBehaviour
 
         while (timer < poseTransitionDuration)
         {
-            Vector3 p = Vector3.Lerp(startingPosition, newPosition, timer / poseTransitionDuration);
+            //Vector3 p = Vector3.Lerp(startingPosition, newPosition, timer / poseTransitionDuration);
             Quaternion r = Quaternion.Lerp(startingRotation, newRotation, timer / poseTransitionDuration);
 
-            h.root.localPosition = p;
+            //h.root.localPosition = p;
             h.root.localRotation = r;
 
             for(int i = 0; i < newBonesRotation.Length; i++)
