@@ -24,7 +24,9 @@ public class SpawnPaperBall : MonoBehaviour
     public void SpawnBall()
     {
         //GameObject spawnedBall = Instantiate(paperBall);
+        paperBall.SetActive(true);
         paperBall.GetComponent<Rigidbody>().position = spawnPoint.position;
         paperBall.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        paperBall.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
     }
 }
