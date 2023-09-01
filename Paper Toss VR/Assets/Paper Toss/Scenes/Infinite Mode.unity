@@ -582,16 +582,10 @@ PrefabInstance:
       propertyPath: scoreBoard
       value: 
       objectReference: {fileID: 1568252230}
-    - target: {fileID: 2678868059126474857, guid: fde7f8e66985f424b98a1ed01f2ce3eb,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2679243571821678763, guid: fde7f8e66985f424b98a1ed01f2ce3eb,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: teleportArea
+      value: 
+      objectReference: {fileID: 1839922303}
     - target: {fileID: 5301956002142026674, guid: fde7f8e66985f424b98a1ed01f2ce3eb,
         type: 3}
       propertyPath: m_LocalPosition.x

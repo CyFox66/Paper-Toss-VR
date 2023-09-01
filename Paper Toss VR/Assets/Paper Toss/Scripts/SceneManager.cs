@@ -9,8 +9,13 @@ public class SceneManager : MonoBehaviour
     public Transform level0Spawn;
     public Transform level1Spawn;
     public Transform level2Spawn;
+    public Transform level3Spawn;
+    public Transform level4Spawn;
+    public Transform level5Spawn;
+    public Transform level6Spawn;
     public Transform infiniteSpawn;
-    
+    public Transform timedSpawn;
+
     public void GoToMainMenu()
     {
         if (mainMenuSpawn != null)
@@ -62,6 +67,58 @@ public class SceneManager : MonoBehaviour
             Debug.LogWarning("No level2Spawn assigned");
         }
     }
+
+    public void GoToLevel3()
+    {
+        if (level2Spawn != null)
+        {
+            XROrigin.transform.position = level3Spawn.position;
+            XROrigin.transform.rotation = level3Spawn.rotation;
+        }
+        else
+        {
+            Debug.LogWarning("No level3Spawn assigned");
+        }
+    }
+
+    public void GoToLevel4()
+    {
+        if (level2Spawn != null)
+        {
+            XROrigin.transform.position = level4Spawn.position;
+            XROrigin.transform.rotation = level4Spawn.rotation;
+        }
+        else
+        {
+            Debug.LogWarning("No level4Spawn assigned");
+        }
+    }
+
+    public void GoToLevel5()
+    {
+        if (level2Spawn != null)
+        {
+            XROrigin.transform.position = level5Spawn.position;
+            XROrigin.transform.rotation = level5Spawn.rotation;
+        }
+        else
+        {
+            Debug.LogWarning("No level5Spawn assigned");
+        }
+    }
+
+    public void GoToLevel6()
+    {
+        if (level2Spawn != null)
+        {
+            XROrigin.transform.position = level6Spawn.position;
+            XROrigin.transform.rotation = level6Spawn.rotation;
+        }
+        else
+        {
+            Debug.LogWarning("No level6Spawn assigned");
+        }
+    }
     public void GoToInfinite()
     {
         if (infiniteSpawn != null)
@@ -75,4 +132,16 @@ public class SceneManager : MonoBehaviour
         }
     }
 
+    public void GoToTimed()
+    {
+        if (timedSpawn != null)
+        {
+            XROrigin.transform.position = timedSpawn.position;
+            XROrigin.transform.rotation = timedSpawn.rotation;
+        }
+        else
+        {
+            Debug.LogWarning("No timedSpawn assigned");
+        }
+    }
 }

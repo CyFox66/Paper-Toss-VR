@@ -116,6 +116,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trash bin Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 1510751820801460, guid: 4e0bc8274a648084d99f2c41d46f9a52, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842362677386614, guid: 4e0bc8274a648084d99f2c41d46f9a52, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4403010801098548, guid: 4e0bc8274a648084d99f2c41d46f9a52, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
