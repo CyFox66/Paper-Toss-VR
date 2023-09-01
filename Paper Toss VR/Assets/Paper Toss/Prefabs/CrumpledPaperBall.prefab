@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 8418111480272149096}
   - component: {fileID: 157925227219591627}
   - component: {fileID: 1293173081937973168}
-  - component: {fileID: 4155480742822144537}
   m_Layer: 0
   m_Name: CrumpledPaperBall
   m_TagString: PaperBall
@@ -79,7 +78,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3382599599597088903}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: c7a2ecaa72d8c72409aaeae6726d5141, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -102,8 +101,8 @@ Rigidbody:
   m_GameObject: {fileID: 3382599599597088903}
   serializedVersion: 4
   m_Mass: 0.01
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 1
+  m_AngularDrag: 1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -119,7 +118,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &157925227219591627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,7 +263,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_ThrowVelocityScale: 1.5
+  m_ThrowVelocityScale: 2.5
   m_ThrowAngularVelocityScale: 1
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
@@ -289,19 +288,6 @@ MonoBehaviour:
   poseTransitionDuration: 0.2
   rightHandPose: {fileID: 4969214058225975535}
   leftHandPose: {fileID: 2597858778148899548}
---- !u!114 &4155480742822144537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3382599599597088903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7f64b391e165e24fba5291c4ee4f46b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreBoard: {fileID: 0}
 --- !u!1 &7412467762506870352
 GameObject:
   m_ObjectHideFlags: 0
