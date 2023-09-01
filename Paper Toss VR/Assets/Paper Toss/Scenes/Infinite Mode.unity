@@ -97,8 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000002, guid: 5d08ea3f7f81e944daee8676f8f44ba0,
-    type: 2}
+  m_LightingDataAsset: {fileID: 0}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -582,10 +581,6 @@ PrefabInstance:
       propertyPath: scoreBoard
       value: 
       objectReference: {fileID: 1568252230}
-    - target: {fileID: 0}
-      propertyPath: teleportArea
-      value: 
-      objectReference: {fileID: 1839922303}
     - target: {fileID: 5301956002142026674, guid: fde7f8e66985f424b98a1ed01f2ce3eb,
         type: 3}
       propertyPath: m_LocalPosition.x

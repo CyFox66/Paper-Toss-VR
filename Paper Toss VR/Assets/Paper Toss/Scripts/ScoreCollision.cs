@@ -12,6 +12,13 @@ public class ScoreCollision : MonoBehaviour
 
     private bool canScore = true;
 
+    private void Awake()
+    {
+        if (trashBin.GetComponent<RandomTeleport>() != null)
+        {
+            trashBin.GetComponent<RandomTeleport>().TeleportRandomly(trashBin);
+        }
+    }
     void OnTriggerEnter(Collider other)
     {
         if (canScore && other.CompareTag(objectTag))
@@ -25,10 +32,16 @@ public class ScoreCollision : MonoBehaviour
     {
         canScore = false;
 
-        scoreBoard.AddScore(1);
+        if(scoreBoard != null)
+        {
+            scoreBoard.AddScore(1);
+        }
+        
         //GameObject particleSystemObject = Instantiate(scoringParticles, transform.position, Quaternion.identity);
         //ParticleSystem particleSystem = particleSystemObject.GetComponent<ParticleSystem>();
+        
         scoringParticles.SetActive(true);
+        
         ParticleSystem particleSystem = scoringParticles.GetComponent<ParticleSystem>();
         
         if (particleSystem != null)
