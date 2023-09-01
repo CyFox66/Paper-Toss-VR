@@ -5,17 +5,18 @@ using UnityEngine;
 
 public class ScoreCollision : MonoBehaviour
 {
-    [SerializeField]
     public string objectTag;
-
     public Scoring scoreBoard;
+    public GameObject scoringParticles;
+    public GameObject trashBin;
 
-    private bool canScore;
+    private bool canScore = true;
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(objectTag))
+        if (canScore && other.CompareTag(objectTag))
         {
+            other.gameObject.SetActive(false);
             StartCoroutine(ScoreWithDelay());
         }
     }
@@ -25,9 +26,31 @@ public class ScoreCollision : MonoBehaviour
         canScore = false;
 
         scoreBoard.AddScore(1);
+        //GameObject particleSystemObject = Instantiate(scoringParticles, transform.position, Quaternion.identity);
+        //ParticleSystem particleSystem = particleSystemObject.GetComponent<ParticleSystem>();
+        scoringParticles.SetActive(true);
+        ParticleSystem particleSystem = scoringParticles.GetComponent<ParticleSystem>();
+        
+        if (particleSystem != null)
+        {
+            particleSystem.Play();
+        }
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
 
+        if (particleSystem != null)
+        {
+            particleSystem.Stop();
+        }
+        
+        scoringParticles.SetActive(false);
+
+        yield return new WaitForSeconds(.5f);
+
+        if (trashBin.GetComponent<RandomTeleport>() != null)
+        {
+            trashBin.GetComponent<RandomTeleport>().TeleportRandomly(trashBin);
+        }
         canScore = true;
     }
 }
