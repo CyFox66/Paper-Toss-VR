@@ -10,7 +10,7 @@ public class SceneActivator : MonoBehaviour
     public bool isActive;
     public GameObject XROrigin;
     public Transform sceneSpawn;
-    public string objectTag;
+    public string[] objectTags;
 
     public void ActivateScene()
     {
@@ -26,9 +26,6 @@ public class SceneActivator : MonoBehaviour
         {
             Debug.LogWarning("No mainMenuSpawn assigned");
         }
-
-        int count = CountObjectsWithTag(objectTag);
-        Debug.Log("Number of objects with tag '" + objectTag + ": " + count);
     }
     public void DeactivateScene()
     {
@@ -38,35 +35,33 @@ public class SceneActivator : MonoBehaviour
     void OnTriggerStay(Collider other)
     {
         //Debug.Log(sceneName + ": Collider Detected");
-        if (other.CompareTag(objectTag))
+        foreach (string tag in objectTags)
         {
-            Debug.Log(sceneName + ": Found Tag");
-            if (isActive)
+            if (other.CompareTag(tag))
             {
-                Debug.Log(sceneName + ": isActive");
-                SceneBasedDeactivation deactivator = other.gameObject.GetComponent<SceneBasedDeactivation>();
-                if (deactivator != null)
+            
+                //Debug.Log(sceneName + ": Found Tag");
+                if (isActive)
                 {
-                    Debug.Log(sceneName + ": Activated Object");
-                    deactivator.ActivateObject();
+                    //Debug.Log(sceneName + ": isActive");
+                    SceneBasedDeactivation deactivator = other.gameObject.GetComponent<SceneBasedDeactivation>();
+                    if (deactivator != null)
+                    {
+                        //Debug.Log(sceneName + ": Activated Object");
+                        deactivator.ActivateObject();
+                    }
                 }
-            }
-            else
-            {
-                Debug.Log(sceneName + ": deActive");
-                SceneBasedDeactivation deactivator = other.gameObject.GetComponent<SceneBasedDeactivation>();
-                if (deactivator != null)
+                else
                 {
-                    Debug.Log(sceneName + ": Deactivated Object");
-                    deactivator.DeactivateObject();
+                    //Debug.Log(sceneName + ": deActive");
+                    SceneBasedDeactivation deactivator = other.gameObject.GetComponent<SceneBasedDeactivation>();
+                    if (deactivator != null)
+                    {
+                        //Debug.Log(sceneName + ": Deactivated Object");
+                        deactivator.DeactivateObject();
+                    }
                 }
             }
         }
-    }
-
-    int CountObjectsWithTag(string tag)
-    {
-        GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag(tag);
-        return taggedObjects.Length;
     }
 }

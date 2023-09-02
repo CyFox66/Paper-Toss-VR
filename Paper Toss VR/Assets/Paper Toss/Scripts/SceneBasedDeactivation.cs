@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class SceneBasedDeactivation : MonoBehaviour
 {
-    private bool isActive = false;
+    //private bool isActive = false;
 
+    private void Start()
+    {
+        this.DeactivateObject();
+    }
+    /*
     private void Update()
     {
         if (isActive)
@@ -23,14 +28,21 @@ public class SceneBasedDeactivation : MonoBehaviour
             }
         }
     }
+    */
     public void ActivateObject()
     {
-        isActive = true;
+        foreach(Transform child in transform)
+        {
+            child.gameObject.SetActive(true);
+        }
     }
 
     public void DeactivateObject() 
-    { 
-        isActive = false;
+    {
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(false);
+        }
     }
 
 
