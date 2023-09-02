@@ -12,6 +12,7 @@ public class SpawnPaperBall : MonoBehaviour
     public void SpawnBall()
     {
         GameObject spawnedBall = Instantiate(paperBall);
+        spawnedBall.SetActive(true);
         spawnedBall.GetComponent<Rigidbody>().position = spawnPoint.position;
     }
 
