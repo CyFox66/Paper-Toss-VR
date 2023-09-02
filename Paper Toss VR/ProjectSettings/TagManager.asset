@@ -16,6 +16,16 @@ TagManager:
   - TagOfCollidingObject
   - PaperBall
   - Goal
+  - PaperBallMainMenu
+  - PaperBallInfinite
+  - PaperBallTimed
+  - PaperBallLevel0
+  - PaperBallLevel1
+  - PaperBallLevel2
+  - PaperBallLevel3
+  - PaperBallLevel4
+  - PaperBallLevel5
+  - PaperBallLevel6
   layers:
   - Default
   - TransparentFX
