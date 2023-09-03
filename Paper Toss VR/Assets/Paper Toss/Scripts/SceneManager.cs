@@ -14,11 +14,16 @@ public class SceneManager : MonoBehaviour
     public SceneActivator level4;
     public SceneActivator level5;
     public SceneActivator level6;
+    public GameObject gameMenu;
 
     public void GoToMainMenu()
     {
         if (mainMenu != null)
         {
+            foreach (Transform child in gameMenu.transform)
+            {
+                child.gameObject.SetActive(false);
+            }
             if (infiniteMode != null)
             {
                 infiniteMode.DeactivateScene();

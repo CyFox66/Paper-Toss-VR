@@ -49,7 +49,7 @@ public class ScoreCollision : MonoBehaviour
             particleSystem.Play();
         }
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
 
         if (particleSystem != null)
         {
