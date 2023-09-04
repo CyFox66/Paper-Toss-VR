@@ -924,29 +924,18 @@
                     "path": "<XRController>{LeftHand}/menuButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "Menu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "c615dcc0-d6a5-420e-87b5-2f18a6175b47",
-                    "path": "<OculusTouchController>/menu",
+                    "id": "cdfc7b13-ad74-4dcb-b765-0633d0c7b10f",
+                    "path": "<XRController>{LeftHand}/menu",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "Menu",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "43e0daad-cb72-407d-af86-f923ea809671",
-                    "path": "<QuestProTouchController>/menu",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "Menu",
                     "isComposite": false,
                     "isPartOfComposite": false
